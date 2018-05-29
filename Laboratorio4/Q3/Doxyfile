@@ -1,0 +1,7 @@
+PROJECT_NAME = "Fila de Pilha"
+PROJECT_BRIEF = "Questão 3 do laboratório 4 de LiP"
+OUTPUT_LANGUAGE	= Brazilian
+RECURSIVE = YES
+GENERATE_HTML = YES
+HTML_OUTPUT	= doc
+GENERATE_LATEX = NO
