@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>Idle Dungeon: Código-Fonte de include/character.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Idle Dungeon
+   </div>
+   <div id="projectbrief">Projeto final da matéria de LiP</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.11 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Busca');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;Principal</span></a></li>
+      <li><a href="pages.html"><span>Páginas&#160;relacionadas</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Arquivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Busca" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;Arquivos</span></a></li>
+      <li><a href="globals.html"><span>Membros&#160;dos&#160;Arquivos</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">character.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="character_8h.html">Vá para a documentação deste arquivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifndef __CHARACTER__</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define __CHARACTER__</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;list&gt;</span></div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;../include/equips.h&quot;</span></div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div><div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classCharacter.html">   19</a></span>&#160;<span class="keyword">class </span><a class="code" href="classCharacter.html">Character</a> {</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <span class="keyword">public</span>:</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  </div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <span class="comment">//Constructors and Destructor</span></div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="classCharacter.html#adc27bdd255876169bad2ed0bae0cffb5">Character</a>(std::string,<span class="keywordtype">int</span>,<span class="keywordtype">int</span>,<span class="keywordtype">int</span>,<span class="keywordtype">int</span>,<span class="keywordtype">int</span>,<span class="keywordtype">int</span>,<span class="keywordtype">int</span>,<span class="keywordtype">int</span>);</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="classCharacter.html#adc27bdd255876169bad2ed0bae0cffb5">Character</a>();</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="classCharacter.html#a9e9be564d05ded80962b2045aa70b3fc">~Character</a>();</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  </div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <span class="comment">//Getters</span></div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">int</span> <span class="keyword">const</span>&amp; <a class="code" href="classCharacter.html#a3b85393d9db5c67444ccf49fb66d40a7">getLabel</a>() <span class="keyword">const</span>;</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  std::string <span class="keyword">const</span>&amp; <a class="code" href="classCharacter.html#ac20aad1dbf398d3e6e0510fd58446cb5">getName</a>() <span class="keyword">const</span>;</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <span class="keywordtype">int</span> <span class="keyword">const</span>&amp; <a class="code" href="classCharacter.html#a7cd87a34a8ffd45a11af1b7bc7ee0628">getHp</a>() <span class="keyword">const</span>;</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <span class="keywordtype">int</span> <span class="keyword">const</span>&amp; <a class="code" href="classCharacter.html#aacc3ac4bdcb7c20ef30cc40a4a90325f">getStr</a>() <span class="keyword">const</span>;</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="keywordtype">int</span> <span class="keyword">const</span>&amp; <a class="code" href="classCharacter.html#adcebe66239bc95040c13e3ba7c6618ed">getDex</a>() <span class="keyword">const</span>;</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <span class="keywordtype">int</span> <span class="keyword">const</span>&amp; <a class="code" href="classCharacter.html#a9f0e267a3a6d6f0232de2dba0226c854">getWis</a>() <span class="keyword">const</span>;</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="keywordtype">int</span> <span class="keyword">const</span>&amp; <a class="code" href="classCharacter.html#a6e5489570041445ed094cf28c677823c">getExp</a>() <span class="keyword">const</span>;</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <span class="keywordtype">int</span> <span class="keyword">const</span>&amp; <a class="code" href="classCharacter.html#a84bccd2e61776052567d5fc5f058904c">getLvl</a>() <span class="keyword">const</span>;</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="keywordtype">int</span> <span class="keyword">const</span>&amp; getNext_lvl() <span class="keyword">const</span>;</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="keywordtype">int</span> <span class="keyword">const</span>&amp; <a class="code" href="classCharacter.html#a076dca4e849c61d0057711686c9efa5c">getMoney</a>() <span class="keyword">const</span>;</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  </div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="comment">//Setters</span></div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classCharacter.html#a7dae16019759ba26a71aa3e8801393b8">setHp</a>(<span class="keywordtype">int</span>);</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classCharacter.html#aba44643e50ed9480efe5c6992b9d3b08">setStr</a>(<span class="keywordtype">int</span>);</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classCharacter.html#a7130683306204cc18319d2cb96490e60">setDex</a>(<span class="keywordtype">int</span>);</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classCharacter.html#a2971041fc4084e222d824c775c95bc27">setWis</a>(<span class="keywordtype">int</span>);</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classCharacter.html#ac7ac69bc1f851aade9ec29046e587710">setExp</a>(<span class="keywordtype">int</span>);</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classCharacter.html#a2d805edc22fd1185946206ffe2613433">setLvl</a>(<span class="keywordtype">int</span>);</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classCharacter.html#a14943063f6eb0e1666fc8dfd0bb9ee17">setNext_lvl</a>(<span class="keywordtype">int</span>);</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classCharacter.html#a59f4f7eb70b2474785f7a3d0fb1c3934">setMoney</a>(<span class="keywordtype">int</span>);</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <span class="comment">//Functions</span></div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classCharacter.html#a5efefa1165e45389f4799ee2f2d38c3a">showStatus</a>();</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classCharacter.html#a8dbcfbd11a5076c304ac32a0bc797748">battle</a>();</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classCharacter.html#aafc1d877e3aa78d3f1639feac733d6e5">lvl_up</a>();</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classCharacter.html#a2366d0ed811cebbf48f47d6bc0662f3f">attack</a>();</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classCharacter.html#aa88bc91e6a3a09f5f14e0280ebe4c586">equip</a>(<a class="code" href="classEquip.html">Equip</a>);</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classCharacter.html#aa88bc91e6a3a09f5f14e0280ebe4c586">equip</a>();</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classCharacter.html#a8c59903c7f6c2fc2f639e71a48ab2f31">equipPrice</a>();</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  </div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="keyword">private</span>:</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    std::string name;</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">int</span> hp,</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        str,</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        dex,</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        wis,</div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        agi,</div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        exp,</div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        lvl,</div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        next_lvl,</div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        money;</div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;};</div><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* CHARACTER */</span><span class="preprocessor"></span></div><div class="ttc" id="classCharacter_html_adc27bdd255876169bad2ed0bae0cffb5"><div class="ttname"><a href="classCharacter.html#adc27bdd255876169bad2ed0bae0cffb5">Character::Character</a></div><div class="ttdeci">Character()</div></div>
+<div class="ttc" id="classCharacter_html_a2971041fc4084e222d824c775c95bc27"><div class="ttname"><a href="classCharacter.html#a2971041fc4084e222d824c775c95bc27">Character::setWis</a></div><div class="ttdeci">void setWis(int)</div><div class="ttdef"><b>Definition:</b> character.cpp:124</div></div>
+<div class="ttc" id="classCharacter_html_a2d805edc22fd1185946206ffe2613433"><div class="ttname"><a href="classCharacter.html#a2d805edc22fd1185946206ffe2613433">Character::setLvl</a></div><div class="ttdeci">void setLvl(int)</div><div class="ttdef"><b>Definition:</b> character.cpp:136</div></div>
+<div class="ttc" id="classCharacter_html_a8c59903c7f6c2fc2f639e71a48ab2f31"><div class="ttname"><a href="classCharacter.html#a8c59903c7f6c2fc2f639e71a48ab2f31">Character::equipPrice</a></div><div class="ttdeci">virtual int equipPrice()</div><div class="ttdef"><b>Definition:</b> character.cpp:196</div></div>
+<div class="ttc" id="classCharacter_html"><div class="ttname"><a href="classCharacter.html">Character</a></div><div class="ttdoc">Classe que representa um personagem. </div><div class="ttdef"><b>Definition:</b> character.h:19</div></div>
+<div class="ttc" id="classCharacter_html_aacc3ac4bdcb7c20ef30cc40a4a90325f"><div class="ttname"><a href="classCharacter.html#aacc3ac4bdcb7c20ef30cc40a4a90325f">Character::getStr</a></div><div class="ttdeci">int const &amp; getStr() const </div><div class="ttdef"><b>Definition:</b> character.cpp:64</div></div>
+<div class="ttc" id="classCharacter_html_a7130683306204cc18319d2cb96490e60"><div class="ttname"><a href="classCharacter.html#a7130683306204cc18319d2cb96490e60">Character::setDex</a></div><div class="ttdeci">void setDex(int)</div><div class="ttdef"><b>Definition:</b> character.cpp:118</div></div>
+<div class="ttc" id="classCharacter_html_a59f4f7eb70b2474785f7a3d0fb1c3934"><div class="ttname"><a href="classCharacter.html#a59f4f7eb70b2474785f7a3d0fb1c3934">Character::setMoney</a></div><div class="ttdeci">void setMoney(int)</div><div class="ttdef"><b>Definition:</b> character.cpp:148</div></div>
+<div class="ttc" id="classCharacter_html_a5efefa1165e45389f4799ee2f2d38c3a"><div class="ttname"><a href="classCharacter.html#a5efefa1165e45389f4799ee2f2d38c3a">Character::showStatus</a></div><div class="ttdeci">void showStatus()</div><div class="ttdef"><b>Definition:</b> character.cpp:156</div></div>
+<div class="ttc" id="classCharacter_html_a9f0e267a3a6d6f0232de2dba0226c854"><div class="ttname"><a href="classCharacter.html#a9f0e267a3a6d6f0232de2dba0226c854">Character::getWis</a></div><div class="ttdeci">int const &amp; getWis() const </div><div class="ttdef"><b>Definition:</b> character.cpp:76</div></div>
+<div class="ttc" id="classEquip_html"><div class="ttname"><a href="classEquip.html">Equip</a></div><div class="ttdoc">Classe que representa um equipamento que pode ser usado pelo personagem. </div><div class="ttdef"><b>Definition:</b> equips.h:16</div></div>
+<div class="ttc" id="classCharacter_html_a3b85393d9db5c67444ccf49fb66d40a7"><div class="ttname"><a href="classCharacter.html#a3b85393d9db5c67444ccf49fb66d40a7">Character::getLabel</a></div><div class="ttdeci">virtual int const &amp; getLabel() const </div><div class="ttdef"><b>Definition:</b> character.cpp:46</div></div>
+<div class="ttc" id="classCharacter_html_a7cd87a34a8ffd45a11af1b7bc7ee0628"><div class="ttname"><a href="classCharacter.html#a7cd87a34a8ffd45a11af1b7bc7ee0628">Character::getHp</a></div><div class="ttdeci">int const &amp; getHp() const </div><div class="ttdef"><b>Definition:</b> character.cpp:58</div></div>
+<div class="ttc" id="classCharacter_html_a84bccd2e61776052567d5fc5f058904c"><div class="ttname"><a href="classCharacter.html#a84bccd2e61776052567d5fc5f058904c">Character::getLvl</a></div><div class="ttdeci">int const &amp; getLvl() const </div><div class="ttdef"><b>Definition:</b> character.cpp:88</div></div>
+<div class="ttc" id="classCharacter_html_ac7ac69bc1f851aade9ec29046e587710"><div class="ttname"><a href="classCharacter.html#ac7ac69bc1f851aade9ec29046e587710">Character::setExp</a></div><div class="ttdeci">void setExp(int)</div><div class="ttdef"><b>Definition:</b> character.cpp:130</div></div>
+<div class="ttc" id="classCharacter_html_a076dca4e849c61d0057711686c9efa5c"><div class="ttname"><a href="classCharacter.html#a076dca4e849c61d0057711686c9efa5c">Character::getMoney</a></div><div class="ttdeci">int const &amp; getMoney() const </div><div class="ttdef"><b>Definition:</b> character.cpp:98</div></div>
+<div class="ttc" id="classCharacter_html_a7dae16019759ba26a71aa3e8801393b8"><div class="ttname"><a href="classCharacter.html#a7dae16019759ba26a71aa3e8801393b8">Character::setHp</a></div><div class="ttdeci">void setHp(int)</div><div class="ttdef"><b>Definition:</b> character.cpp:106</div></div>
+<div class="ttc" id="classCharacter_html_aba44643e50ed9480efe5c6992b9d3b08"><div class="ttname"><a href="classCharacter.html#aba44643e50ed9480efe5c6992b9d3b08">Character::setStr</a></div><div class="ttdeci">void setStr(int)</div><div class="ttdef"><b>Definition:</b> character.cpp:112</div></div>
+<div class="ttc" id="classCharacter_html_aafc1d877e3aa78d3f1639feac733d6e5"><div class="ttname"><a href="classCharacter.html#aafc1d877e3aa78d3f1639feac733d6e5">Character::lvl_up</a></div><div class="ttdeci">virtual void lvl_up()</div><div class="ttdef"><b>Definition:</b> character.cpp:173</div></div>
+<div class="ttc" id="classCharacter_html_a14943063f6eb0e1666fc8dfd0bb9ee17"><div class="ttname"><a href="classCharacter.html#a14943063f6eb0e1666fc8dfd0bb9ee17">Character::setNext_lvl</a></div><div class="ttdeci">void setNext_lvl(int)</div><div class="ttdef"><b>Definition:</b> character.cpp:142</div></div>
+<div class="ttc" id="classCharacter_html_a9e9be564d05ded80962b2045aa70b3fc"><div class="ttname"><a href="classCharacter.html#a9e9be564d05ded80962b2045aa70b3fc">Character::~Character</a></div><div class="ttdeci">~Character()</div></div>
+<div class="ttc" id="classCharacter_html_aa88bc91e6a3a09f5f14e0280ebe4c586"><div class="ttname"><a href="classCharacter.html#aa88bc91e6a3a09f5f14e0280ebe4c586">Character::equip</a></div><div class="ttdeci">virtual void equip()</div><div class="ttdef"><b>Definition:</b> character.cpp:190</div></div>
+<div class="ttc" id="classCharacter_html_a2366d0ed811cebbf48f47d6bc0662f3f"><div class="ttname"><a href="classCharacter.html#a2366d0ed811cebbf48f47d6bc0662f3f">Character::attack</a></div><div class="ttdeci">virtual int attack()</div><div class="ttdef"><b>Definition:</b> character.cpp:178</div></div>
+<div class="ttc" id="classCharacter_html_a6e5489570041445ed094cf28c677823c"><div class="ttname"><a href="classCharacter.html#a6e5489570041445ed094cf28c677823c">Character::getExp</a></div><div class="ttdeci">int const &amp; getExp() const </div><div class="ttdef"><b>Definition:</b> character.cpp:82</div></div>
+<div class="ttc" id="classCharacter_html_adcebe66239bc95040c13e3ba7c6618ed"><div class="ttname"><a href="classCharacter.html#adcebe66239bc95040c13e3ba7c6618ed">Character::getDex</a></div><div class="ttdeci">int const &amp; getDex() const </div><div class="ttdef"><b>Definition:</b> character.cpp:70</div></div>
+<div class="ttc" id="classCharacter_html_a8dbcfbd11a5076c304ac32a0bc797748"><div class="ttname"><a href="classCharacter.html#a8dbcfbd11a5076c304ac32a0bc797748">Character::battle</a></div><div class="ttdeci">void battle()</div><div class="ttdef"><b>Definition:</b> character.cpp:202</div></div>
+<div class="ttc" id="classCharacter_html_ac20aad1dbf398d3e6e0510fd58446cb5"><div class="ttname"><a href="classCharacter.html#ac20aad1dbf398d3e6e0510fd58446cb5">Character::getName</a></div><div class="ttdeci">std::string const &amp; getName() const </div><div class="ttdef"><b>Definition:</b> character.cpp:52</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.11
+</small></address>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>Idle Dungeon: Código-Fonte de include/warrior.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Idle Dungeon
+   </div>
+   <div id="projectbrief">Projeto final da matéria de LiP</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.11 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Busca');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;Principal</span></a></li>
+      <li><a href="pages.html"><span>Páginas&#160;relacionadas</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Arquivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Busca" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;Arquivos</span></a></li>
+      <li><a href="globals.html"><span>Membros&#160;dos&#160;Arquivos</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">warrior.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="warrior_8h.html">Vá para a documentação deste arquivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifndef __WARRIOR__</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define __WARRIOR__</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;list&gt;</span></div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;../include/equips.h&quot;</span></div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;../include/character.h&quot;</span></div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div><div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classWarrior.html">   19</a></span>&#160;<span class="keyword">class </span><a class="code" href="classWarrior.html">Warrior</a> : <span class="keyword">public</span> <a class="code" href="classCharacter.html">Character</a>{</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <span class="keyword">public</span>:    </div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="comment">//constructors and destructors.</span></div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="classWarrior.html#a514c253a8e9c3f845f11f344804335d4">Warrior</a>(std::string,<span class="keywordtype">int</span>,<span class="keywordtype">int</span>,<span class="keywordtype">int</span>,<span class="keywordtype">int</span>,<span class="keywordtype">int</span>,<span class="keywordtype">int</span>,<span class="keywordtype">int</span>,<span class="keywordtype">int</span>,<a class="code" href="classEquip.html">Equip</a>,std::list&lt;Equip&gt;);</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="classWarrior.html#a514c253a8e9c3f845f11f344804335d4">Warrior</a>();</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="classWarrior.html#aab6dc963d8e8e13517e5a9e5fa74aaaa">~Warrior</a>();</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    </div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="comment">//Getters</span></div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;   <span class="keywordtype">int</span> <span class="keyword">const</span>&amp; <a class="code" href="classWarrior.html#aebbfeeffbbd3fb08bc9ab9179e4b9cd0">getLabel</a>() <span class="keyword">const override</span>;</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="comment">//Functions</span></div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classWarrior.html#adb1d82ee758559342b1b37fde70d715d">lvl_up</a>();</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classWarrior.html#a48dcbef3c7148155429ca8676c1d7fbd">attack</a>();</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classWarrior.html#a3342aa4e5eefcb7a9cfbdca28d678fb8">equip</a>(<a class="code" href="classEquip.html">Equip</a>);</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classWarrior.html#a3342aa4e5eefcb7a9cfbdca28d678fb8">equip</a>();</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classWarrior.html#abd3a7a6eec64336635e247704bc1ba86">equipPrice</a>();</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  </div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="keyword">private</span>:</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="classEquip.html">Equip</a> equiped;</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    std::list&lt;Equip&gt; inventory;</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">int</span> <span class="keyword">const</span> label = 0;</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;};</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* WARRIOR */</span><span class="preprocessor"></span></div><div class="ttc" id="classWarrior_html_adb1d82ee758559342b1b37fde70d715d"><div class="ttname"><a href="classWarrior.html#adb1d82ee758559342b1b37fde70d715d">Warrior::lvl_up</a></div><div class="ttdeci">void lvl_up()</div><div class="ttdef"><b>Definition:</b> warrior.cpp:47</div></div>
+<div class="ttc" id="classWarrior_html_a3342aa4e5eefcb7a9cfbdca28d678fb8"><div class="ttname"><a href="classWarrior.html#a3342aa4e5eefcb7a9cfbdca28d678fb8">Warrior::equip</a></div><div class="ttdeci">void equip()</div><div class="ttdef"><b>Definition:</b> warrior.cpp:92</div></div>
+<div class="ttc" id="classWarrior_html_aab6dc963d8e8e13517e5a9e5fa74aaaa"><div class="ttname"><a href="classWarrior.html#aab6dc963d8e8e13517e5a9e5fa74aaaa">Warrior::~Warrior</a></div><div class="ttdeci">~Warrior()</div></div>
+<div class="ttc" id="classWarrior_html_aebbfeeffbbd3fb08bc9ab9179e4b9cd0"><div class="ttname"><a href="classWarrior.html#aebbfeeffbbd3fb08bc9ab9179e4b9cd0">Warrior::getLabel</a></div><div class="ttdeci">int const &amp; getLabel() const override</div><div class="ttdef"><b>Definition:</b> warrior.cpp:39</div></div>
+<div class="ttc" id="classCharacter_html"><div class="ttname"><a href="classCharacter.html">Character</a></div><div class="ttdoc">Classe que representa um personagem. </div><div class="ttdef"><b>Definition:</b> character.h:19</div></div>
+<div class="ttc" id="classEquip_html"><div class="ttname"><a href="classEquip.html">Equip</a></div><div class="ttdoc">Classe que representa um equipamento que pode ser usado pelo personagem. </div><div class="ttdef"><b>Definition:</b> equips.h:16</div></div>
+<div class="ttc" id="classWarrior_html_a514c253a8e9c3f845f11f344804335d4"><div class="ttname"><a href="classWarrior.html#a514c253a8e9c3f845f11f344804335d4">Warrior::Warrior</a></div><div class="ttdeci">Warrior()</div></div>
+<div class="ttc" id="classWarrior_html"><div class="ttname"><a href="classWarrior.html">Warrior</a></div><div class="ttdoc">Classe que representa um guerreiro. </div><div class="ttdef"><b>Definition:</b> warrior.h:19</div></div>
+<div class="ttc" id="classWarrior_html_abd3a7a6eec64336635e247704bc1ba86"><div class="ttname"><a href="classWarrior.html#abd3a7a6eec64336635e247704bc1ba86">Warrior::equipPrice</a></div><div class="ttdeci">int equipPrice()</div><div class="ttdef"><b>Definition:</b> warrior.cpp:100</div></div>
+<div class="ttc" id="classWarrior_html_a48dcbef3c7148155429ca8676c1d7fbd"><div class="ttname"><a href="classWarrior.html#a48dcbef3c7148155429ca8676c1d7fbd">Warrior::attack</a></div><div class="ttdeci">int attack()</div><div class="ttdef"><b>Definition:</b> warrior.cpp:57</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.11
+</small></address>
+</body>
+</html>
