@@ -275,6 +275,7 @@ bool game(Character* player){
 		} catch (IndiceInvalido &ex){
 			system("clear");
 			cout << ex.what() << endl;
+			return false;
 		} catch (...){
 			cout << "\033[91mOcorreu um erro inesperado!!!" << endl;
 		}
