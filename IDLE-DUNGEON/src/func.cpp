@@ -94,24 +94,31 @@ void intro(){
 				
 				cin >> num;
 				
-				if(num > 3 or num < 1){
-					cout << "\033[91mOpcao invalida!\033[39m" << endl;
-					
-				} else {
-					//Novo personagem
-					Equip new_equip;
-					list<Equip> new_list;
-					if(num == 1){
-						player = new Warrior(username,150,30,8,10,0,1,100,0,new_equip,new_list);
-						laco = false;
-					} else if(num == 2){
-						player = new Warlock(username,80,20,10,17,0,1,100,0,new_equip,new_list);
-						laco = false;
-					} else {
-						player = new Thief(username,100,15,15,10,0,1,100,0,new_equip,new_list);
-						laco = false;
+				try{
+					if(num > 3 or num < 1) throw IndiceInvalido();
+					else{
+						//Novo personagem
+						Equip new_equip;
+						list<Equip> new_list;
+						if(num == 1){
+							player = new Warrior(username,150,30,8,10,0,1,100,0,new_equip,new_list);
+							laco = false;
+						} else if(num == 2){
+							player = new Warlock(username,80,20,10,17,0,1,100,0,new_equip,new_list);
+							laco = false;
+						} else {
+							player = new Thief(username,100,15,15,10,0,1,100,0,new_equip,new_list);
+							laco = false;
+						}
+						system("clear");
 					}
+				} catch (IndiceInvalido &ex){
 					system("clear");
+					cout << ex.what() << endl;
+					return;
+				} catch (...){
+					cout << "\033[91mOcorreu um erro inesperado!!!" << endl;
+					return;
 				}
 				
 			} else if(option.compare("n") == 0 or option.compare("N") == 0){
