@@ -10,17 +10,25 @@ fecha, mas caso o usuário queira criar um personagem, ele proseguirá para a es
 
 As classes são:
 	Guerreiro(Seu atributo principal é a força. O guerreiro aumenta sua força ao longo dos niveis.)
+
 	Mago(Seu atributo principal é a sabedoria. O mago tem sua sabedoria aumentada exponencialmente ao longo do niveis.)
+
 	Ladino(Seu atributo principal é a dextreza. O ladino tem mais chances de dar critico.)
 
 Se o apelido já existir no database, os dados do jogador vão ser carregados para o usuário poder jogar o jogo.
 
 Após chegar na cidade de Crystal Water, o jogador poderá:
+
 	Enfrentar a Dungeon
+
 	Ver status
+
 	Comprar itens
+
 	Salvar o jogo
+
 	Voltar ao menu
+	
 	Sair do jogo
 
 Se o jogador quiser enfrentar a dungeon, ele irá encontrar diversos monstros para duelar, parando somente quando o 
