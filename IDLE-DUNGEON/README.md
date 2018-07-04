@@ -9,6 +9,7 @@ será perguntado se é desejado criar um novo personagem com o apelido digitado.
 fecha, mas caso o usuário queira criar um personagem, ele proseguirá para a escolha da classe.
 
 As classes são:
+
 	Guerreiro(Seu atributo principal é a força. O guerreiro aumenta sua força ao longo dos niveis.)
 
 	Mago(Seu atributo principal é a sabedoria. O mago tem sua sabedoria aumentada exponencialmente ao longo do niveis.)
@@ -28,7 +29,7 @@ Após chegar na cidade de Crystal Water, o jogador poderá:
 	Salvar o jogo
 
 	Voltar ao menu
-	
+
 	Sair do jogo
 
 Se o jogador quiser enfrentar a dungeon, ele irá encontrar diversos monstros para duelar, parando somente quando o 
