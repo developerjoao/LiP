@@ -125,7 +125,6 @@ void intro(){
 				cout << "Fim de jogo!" << endl;
 				player->setHp(-999999);
 				laco = false;
-				
 			} else {
 				system("clear");
 				cout << "\033[91mOpcao invalida!\033[39m" << endl;
@@ -258,7 +257,7 @@ bool game(Character* player){
 				} else if(num == 2){
 					system("clear");
 					player->showStatus();
-				
+					//cout<<player;
 				} else if(num == 3){
 					system("clear");
 					player->equip(loja(player->getLabel()));
@@ -285,6 +284,7 @@ bool game(Character* player){
 			return false;
 		} catch (...){
 			cout << "\033[91mOcorreu um erro inesperado!!!" << endl;
+			return false;
 		}
 	}
 	return false;

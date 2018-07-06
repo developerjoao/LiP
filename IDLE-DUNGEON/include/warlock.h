@@ -34,6 +34,7 @@ class Warlock : public Character{
     void equip(Equip);
     void equip();
     int equipPrice();
+    std::ostream& print(std::ostream& o);
     
   private:
     Equip equiped;

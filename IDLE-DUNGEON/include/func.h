@@ -27,4 +27,5 @@ void save_game(Character*);
 bool game(Character*);
 vector<string> Load(ifstream& savefile);
 
+
 #endif

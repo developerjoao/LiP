@@ -49,6 +49,8 @@ class Character {
   //Functions
   void showStatus();
   void battle();
+  virtual std::ostream& print(std::ostream&);
+  friend std::ostream& operator << (std::ostream &o, Character player);
   virtual void lvl_up();
   virtual int attack();
   virtual void equip(Equip);
@@ -67,4 +69,5 @@ class Character {
         next_lvl,
         money;
 };
+
 #endif /* CHARACTER */

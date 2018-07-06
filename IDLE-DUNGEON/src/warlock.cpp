@@ -89,4 +89,22 @@
   int Warlock::equipPrice(){
     return this->equiped.getPreco();
   }
-    
+
+/**
+* @details Método virtual para auxiliar a sobrecarga de operador
+*/
+  std::ostream& Warlock::print(std::ostream &o){
+    int opcao;
+    o<<"Nome: "<<this->getName()<<std::endl
+    <<"Lvl: "<<this->getLvl()<<std::endl
+    <<"Hp: "<<this->getHp()<<std::endl
+    <<"Strengh: "<<this->getStr()<<std::endl
+    <<"Dexterity: "<<this->getDex()<<std::endl
+    <<"Wisdom: "<<this->getWis()<<std::endl
+    <<"Exp: "<<this->getExp()<<std::endl
+    <<"Money: "<<this->getMoney()<<std::endl
+    <<"Para voltar a cidade entre qualquer tecla:";
+    std::cin>>opcao;
+    system("clear");
+    return o;
+  }

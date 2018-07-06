@@ -1,11 +1,13 @@
 Projeto LP1
 
-Para compilar o projeto, digite make no terminal estando dentro da pasta IDLE-DUNGEON.
+Bem vindo ao Idle-Dungeon, o jogo em que você enfrenta a dungeon infinita.
 
-Após ter o projeto compilado, digite make run no terminal para começar o jogo. Have fun!
+Para compilar e rodar o programa digite make all dentro da pasta em que está o arquivo Makefile. Have fun!
+
+Caso já tenha compilado o programa uma vez, basta digitar make run para rodar o jogo.
 
 Quando você roda o jogo, é pedido para o usuário digitar seu apelido, caso não exista alguem com o apelido digitado,
-será perguntado se é desejado criar um novo personagem com o apelido digitado. Se o jogador digitar n ou N, o programa
+será perguntado se é desejado criar um novo personagem com o apelido digitado. Se o jogador digitar n ou N o programa
 fecha, mas caso o usuário queira criar um personagem, ele proseguirá para a escolha da classe.
 
 As classes são:

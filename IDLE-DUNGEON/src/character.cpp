@@ -167,6 +167,21 @@
     cin>>opcao;
     system("clear");
   }
+
+/**
+* @details Sobrecarga do operador << para informar ao jogador o status atual do personagem. Imprime em tela todos os atributos.
+*/
+std::ostream& operator<< (std::ostream& o, Character player){
+  return player.print(o);
+}
+
+/**
+* @details Método virtual para auxiliar a sobrecarga de operador
+*/
+std::ostream& Character::print(std::ostream& o){
+  return o;
+}
+
 /**
 * @details Método virtual de crescimento de nível.
 */
